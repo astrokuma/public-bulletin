@@ -1,0 +1,183 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #db886f;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1e26;
+}
+
+html, body {
+    margin: 0;
+    padding: 1em .6em 0 .6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #1c1e26;
+    color: #bbb;
+}
+
+h1, h2, p {
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    border-bottom: 2px solid #bbb;
+    padding: 0 2em .2em;
+}
+
+p {
+    letter-spacing: 1.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    max-width: 24em;
+}
+
+textarea, input {
+    background-color: #17181f;
+    border: none;
+    border-radius: 6px;
+    padding: .6em;
+    box-sizing: border-box;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #db886f;
+    outline: 1px solid #c4a88a;
+}
+
+textarea {
+    height: 10em;
+}
+
+button {
+    padding: .5em;
+    border: none;
+    border-radius: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #17181f;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #db886f;
+	box-shadow: #db886f 0px 0px 10px;
+    outline: #db886f solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: .5s all;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+        color: #db886f;
+		box-shadow: #db886f 0px 0px 10px;
+        outline: #db886f solid 1px;
+	}
+	50% {
+        color: #c4a88a;
+		box-shadow: #c4a88a 0px 0px 20px;
+        outline: #c4a88a solid 1px;
+	}
+}
+
+button:hover {
+    color: #c4a88a;
+    box-shadow: #c4a88a 0px 0px 20px;
+    outline: #c4a88a solid 1px;
+    animation: none;
+}
+
+#post{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+    min-width: 100%;
+}
+
+li{
+    color: #bbb;
+    background-color: #17181f;
+    font-weight: 500;
+    padding: 1em;
+    max-width: 24em;
+    border-radius: 6px;
+    outline: 4px solid #1c1e26;
+    border: 1px solid #db886f;
+    box-shadow: #db886f 10px 10px 0em;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#user-div {
+    margin-top: .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #c4a88a;
+}
+
+#verified {
+    font-size: 1.5em;
+    width: 1em;
+    user-select: none;
+    fill: #db886f;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    display: none;
+}
+
+#heart {
+    font-size: 1.5em;
+    width: 1em;
+    user-select: none;
+}
+
+.default-icon {
+    fill: #17181f;
+    stroke: #c4a88a;
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    cursor: pointer;
+}
+
+.default-icon:hover {
+    fill: #c4a88a;
+    stroke: #c4a88a;
+    stroke-width: 1px;
+    stroke-linejoin: round;
+}
+
+.liked {
+    fill: #db886f;
+    stroke: #db886f;
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+}
