@@ -44,8 +44,8 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 100%;
     max-width: 24em;
+    width: 100%;
 }
 
 textarea, input {
@@ -104,33 +104,39 @@ button:hover {
 
 #post{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 70em;
     gap: 1.5em;
     list-style: none;
     padding: 0;
     margin: 0 0 2em 0;
     min-width: 100%;
+    flex-wrap: wrap;
 }
 
 li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: #bbb;
     background-color: #17181f;
     font-weight: 500;
     padding: 1em;
-    max-width: 24em;
     border-radius: 6px;
     outline: 4px solid #1c1e26;
     border: 1px solid #db886f;
     box-shadow: #db886f 10px 10px 0em;
     box-sizing: border-box;
     text-align: left;
+    min-width: 16em;
+    max-width: 40em;
 }
 
 #user-div {
     margin-top: .5em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     color: #c4a88a;
 }
 
@@ -179,5 +185,8 @@ li{
     }
     h2 {
         font-size: 1.3em;
+    }
+    #post {
+        flex-direction: column;
     }
 }
